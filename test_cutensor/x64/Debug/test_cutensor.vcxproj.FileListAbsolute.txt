@@ -1,0 +1,1 @@
+C:\diplom\test\test_cutensor\x64\Debug\test_cutensor.exe

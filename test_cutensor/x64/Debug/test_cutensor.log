@@ -1,0 +1,21 @@
+﻿  Compiling CUDA source file kernel.cu...
+  
+  C:\diplom\test\test_cutensor>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.6\bin\nvcc.exe" -gencode=arch=compute_52,code=\"sm_52,compute_52\" --use-local-env -ccbin "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\bin\HostX64\x64" -x cu   -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.6\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.6\include"  -G   --keep-dir x64\Debug  -maxrregcount=0  --machine 64 --compile -cudart static  -g  -DWIN32 -DWIN64 -D_DEBUG -D_CONSOLE -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /Fdx64\Debug\vc143.pdb /FS /Zi /RTC1 /MDd " -o C:\diplom\test\test_cutensor\x64\Debug\kernel.cu.obj "C:\diplom\test\test_cutensor\kernel.cu" 
+  kernel.cu
+C:\diplom\test\test_cutensor\kernel.cu(56): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\diplom\test\test_cutensor\kernel.cu(70): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\diplom\test\test_cutensor\kernel.cu(71): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\diplom\test\test_cutensor\kernel.cu(72): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\diplom\test\test_cutensor\kernel.cu(116): warning C4018: '<': signed/unsigned mismatch
+C:\diplom\test\test_cutensor\kernel.cu(120): warning C4018: '<': signed/unsigned mismatch
+C:\diplom\test\test_cutensor\kernel.cu(123): warning C4018: '<': signed/unsigned mismatch
+C:\diplom\test\test_cutensor\kernel.cu(129): warning C4244: 'argument': conversion from '__int64' to 'int', possible loss of data
+C:\diplom\test\test_cutensor\kernel.cu(129): warning C4244: 'argument': conversion from '__int64' to 'int', possible loss of data
+C:\diplom\test\test_cutensor\kernel.cu(134): warning C4244: 'argument': conversion from '__int64' to 'int', possible loss of data
+C:\diplom\test\test_cutensor\kernel.cu(134): warning C4244: 'argument': conversion from '__int64' to 'int', possible loss of data
+C:\diplom\test\test_cutensor\kernel.cu(140): warning C4244: 'argument': conversion from '__int64' to 'int', possible loss of data
+C:\diplom\test\test_cutensor\kernel.cu(140): warning C4244: 'argument': conversion from '__int64' to 'int', possible loss of data
+C:\diplom\test\test_cutensor\kernel.cu(263): warning C4244: 'argument': conversion from '__int64' to 'int', possible loss of data
+C:\diplom\test\test_cutensor\kernel.cu(263): warning C4244: 'argument': conversion from '__int64' to 'int', possible loss of data
+C:\diplom\test\test_cutensor\kernel.cu(217): warning C4996: 'cutensorContractionGetWorkspace': please use cutensorContractionGetWorkspaceSize instead.
+  test_cutensor.vcxproj -> C:\diplom\test\test_cutensor\x64\Debug\test_cutensor.exe
