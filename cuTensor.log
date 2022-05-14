@@ -1,0 +1,32 @@
+==13708== NVPROF is profiling process 13708, command: ./test_cutensor/x64/Debug/test_cutensor.exe
+==13708== Profiling application: ./test_cutensor/x64/Debug/test_cutensor.exe
+==13708== Profiling result:
+            Type  Time(%)      Time     Calls       Avg       Min       Max  Name
+ GPU activities:   65.73%  78.497us         3  26.165us  3.7760us  49.056us  [CUDA memcpy HtoD]
+                   17.87%  21.344us         1  21.344us  21.344us  21.344us  [CUDA memcpy DtoH]
+                   11.49%  13.727us         1  13.727us  13.727us  13.727us  maxwell_sgemm_128x32_nn
+                    4.90%  5.8570us         1  5.8570us  5.8570us  5.8570us  void splitKreduce_kernel<int=32, int=16, int, float, float, float, float, bool=1, bool=0, bool=0>(cublasSplitKParams<float>, float const *, float const *, float*, float const *, float const *, float const *, float const *, float*, void*, __int64, float*, int*)
+      API calls:   70.12%  663.27ms         6  110.55ms  8.6000us  450.45ms  cudaFree
+                   29.64%  280.37ms         4  70.094ms  5.1000us  279.95ms  cudaMalloc
+                    0.09%  878.80us         4  219.70us  132.30us  378.90us  cudaMemcpy
+                    0.06%  604.30us         1  604.30us  604.30us  604.30us  cudaDeviceSynchronize
+                    0.03%  294.30us       805     365ns     200ns  6.8000us  cuGetProcAddress
+                    0.02%  193.20us         1  193.20us  193.20us  193.20us  cuModuleUnload
+                    0.01%  138.70us         2  69.350us  23.500us  115.20us  cudaLaunchKernel
+                    0.01%  74.000us       297     249ns     100ns  1.6000us  cuDeviceGetAttribute
+                    0.00%  30.900us        14  2.2070us  1.2000us  12.200us  cudaOccupancyMaxActiveBlocksPerMultiprocessorWithFlags
+                    0.00%  10.200us         5  2.0400us     400ns  7.3000us  cuDeviceGetCount
+                    0.00%  10.000us         4  2.5000us     500ns  4.8000us  cudaGetDevice
+                    0.00%  7.4000us        14     528ns     300ns  2.0000us  cudaDeviceGetAttribute
+                    0.00%  6.5000us         3  2.1660us  1.1000us  4.2000us  cuDeviceGetName
+                    0.00%  5.6000us         2  2.8000us  1.1000us  4.5000us  cuInit
+                    0.00%  5.1000us         4  1.2750us     300ns  3.8000us  cuDeviceGet
+                    0.00%  4.5000us         1  4.5000us  4.5000us  4.5000us  cudaGetDeviceProperties
+                    0.00%  3.1000us         5     620ns     400ns  1.2000us  cudaGetLastError
+                    0.00%  2.6000us         1  2.6000us  2.6000us  2.6000us  cudaGetSymbolAddress
+                    0.00%  2.5000us         3     833ns     600ns  1.2000us  cuDeviceTotalMem
+                    0.00%  1.8000us         3     600ns     500ns     700ns  cuDeviceGetLuid
+                    0.00%  1.4000us         1  1.4000us  1.4000us  1.4000us  cuDevicePrimaryCtxRelease
+                    0.00%  1.3000us         3     433ns     400ns     500ns  cuDeviceGetUuid
+                    0.00%     300ns         2     150ns     100ns     200ns  cuDriverGetVersion
+                    0.00%     200ns         1     200ns     200ns     200ns  cuModuleGetLoadingMode

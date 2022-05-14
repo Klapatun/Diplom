@@ -1,0 +1,36 @@
+==16412== NVPROF is profiling process 16412, command: ./test1/test1/x64/Release/test1.exe
+==16412== Warning: Profiling results might be incorrect with current version of nvcc compiler used to compile cuda app. Compile with nvcc compiler 9.0 or later version to get correct profiling results. Ignore this warning if code is already compiled with the recommended nvcc version 
+==16412== Profiling application: ./test1/test1/x64/Release/test1.exe
+==16412== Profiling result:
+            Type  Time(%)      Time     Calls       Avg       Min       Max  Name
+ GPU activities:   60.48%  52.736us         2  26.368us  3.7760us  48.960us  [CUDA memcpy HtoD]
+                   22.53%  19.648us         1  19.648us  19.648us  19.648us  [CUDA memcpy DtoH]
+                   16.99%  14.815us         1  14.815us  14.815us  14.815us  sgemm_32x32x32_NN_vec
+      API calls:   79.09%  854.25ms         8  106.78ms  9.4000us  460.95ms  cudaFree
+                   20.69%  223.47ms         2  111.74ms  2.6000us  223.47ms  cudaEventCreate
+                    0.06%  663.90us         6  110.65us  5.6000us  381.30us  cudaMalloc
+                    0.06%  608.30us         3  202.77us  128.50us  317.10us  cudaMemcpy
+                    0.03%  328.20us       810     405ns     100ns  9.3000us  cuGetProcAddress
+                    0.02%  197.00us         1  197.00us  197.00us  197.00us  cudaLaunchKernel
+                    0.01%  142.90us         6  23.816us  3.3000us  65.900us  cudaDeviceSynchronize
+                    0.01%  111.00us         1  111.00us  111.00us  111.00us  cudaEventSynchronize
+                    0.01%  86.200us       297     290ns     100ns  1.7000us  cuDeviceGetAttribute
+                    0.00%  43.600us        18  2.4220us  1.2000us  12.500us  cudaEventCreateWithFlags
+                    0.00%  38.700us        18  2.1500us  1.2000us  11.800us  cudaEventDestroy
+                    0.00%  37.800us         1  37.800us  37.800us  37.800us  cudaEventElapsedTime
+                    0.00%  37.700us         2  18.850us  17.700us  20.000us  cudaEventRecord
+                    0.00%  28.100us         1  28.100us  28.100us  28.100us  cuModuleUnload
+                    0.00%  10.600us        14     757ns     500ns  2.2000us  cudaDeviceGetAttribute
+                    0.00%  9.3000us         3  3.1000us     500ns  5.9000us  cudaGetDevice
+                    0.00%  9.2000us         5  1.8400us     300ns  5.9000us  cuDeviceGetCount
+                    0.00%  7.9000us         2  3.9500us  1.9000us  6.0000us  cuInit
+                    0.00%  6.9000us         3  2.3000us     900ns  3.9000us  cuDeviceGetName
+                    0.00%  4.6000us         4  1.1500us     400ns  3.0000us  cuDeviceGet
+                    0.00%  2.7000us         1  2.7000us  2.7000us  2.7000us  cudaGetSymbolAddress
+                    0.00%  2.1000us         3     700ns     500ns     900ns  cuDeviceTotalMem
+                    0.00%  1.9000us         3     633ns     600ns     700ns  cuDeviceGetLuid
+                    0.00%  1.3000us         3     433ns     400ns     500ns  cuDeviceGetUuid
+                    0.00%  1.2000us         1  1.2000us  1.2000us  1.2000us  cuDevicePrimaryCtxRelease
+                    0.00%     600ns         2     300ns     200ns     400ns  cuModuleGetLoadingMode
+                    0.00%     600ns         1     600ns     600ns     600ns  cudaGetLastError
+                    0.00%     500ns         2     250ns     200ns     300ns  cuDriverGetVersion
